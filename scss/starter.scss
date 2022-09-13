@@ -126,12 +126,20 @@ p {
   padding-bottom: 79px;
 }
 
+.py-6 {
+  padding-block: 20px;
+}
+
 .py-9 {
   padding-block: 90px;
 }
 
 .px-7 {
   padding-inline: 79px;
+}
+
+.pt-9 {
+  padding-top: 90px;
 }
 
 .pb-9 {
@@ -157,6 +165,11 @@ p {
   margin-block: 5px;
 }
 
+@media screen and (min-width: 48em) {
+  .py-6 {
+    padding-block: 50px;
+  }
+}
 // header section styles
 header {
   display: none;
@@ -201,19 +214,31 @@ header {
   color: $secondary-300;
 }
 
+.menu {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+}
+
+@media screen and (min-width: 48em) {
+  .menu {
+    display: none;
+  }
+}
+
 // main content styles
 // 1. landing-section styles
 #landing-section {
   background: url("../img/main/mobile_intro_bg.png");
   background-repeat: no-repeat;
   background-position: right;
+  background-size: cover;
 }
 
 @media screen and (min-width: 48em) {
   #landing-section {
     background: url("../img/main/main-background.png");
     background-position: center left -50px;
-    background-size: cover;
   }
 }
 
@@ -353,4 +378,11 @@ blockquote {
   .img-container {
     flex-direction: row;
   }
+}
+
+// footer section styles
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+
 }
