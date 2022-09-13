@@ -18,7 +18,7 @@ $theme-colors: (
   "white-200": $white-200,
 );
 
-$border-radius: .4rem;
+$border-radius: 0.4rem;
 $font-family-base: "Lato", sans-serif;
 
 $container-max-widths: (
@@ -59,13 +59,53 @@ $spacers: map-merge($spacers, $custom-spacers);
   color: $secondary-300;
 }
 
-.secondary-header {
+#leading-header {
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: url("../img/sponsers/arcadia.png");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(202, 45, 27, 0.8);
+  -webkit-mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+
+.sub-header {
   font-size: 1.5rem;
+  font-weight: 400;
+  color: $secondary-300;
+}
+
+@media screen and (min-width: 48rem) {
+  #leading-header {
+    font-size: 4rem;
+    font-weight: 900;
+    background: url("../img/sponsers/arcadia.png");
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(202, 45, 27, 0.8);
+    -webkit-mix-blend-mode: multiply;
+    mix-blend-mode: multiply;
+  }
+
+  .primary-header {
+    font-size: 2.7rem;
+  }
+
+  .sub-header {
+  font-size: 2.3rem;
+  font-weight: 400;
+  color: $secondary-300;
+}
+}
+
+.secondary-header {
+  font-size: 1.7rem;
   font-weight: 700;
 }
 
 .fs-100 {
-  font-size: .85rem;
+  font-size: 0.85rem;
   font-weight: 400;
 }
 
@@ -94,6 +134,9 @@ p {
 .pb-7 {
   padding-bottom: 79px;
 }
+.py-9 {
+  padding-block: 90px;
+}
 
 .px-7 {
   padding-inline: 79px;
@@ -111,6 +154,10 @@ p {
   max-width: 40px;
   margin-inline: auto;
   border-width: 2px;
+}
+
+.text-xl {
+  font-size: 3rem;
 }
 
 // header section styles
@@ -156,23 +203,24 @@ header {
 
 // main content styles
 // 1. landing-section styles
-.landing-section {
-  min-height: 100vh;
+#landing-section {
   background: url("../img/main/mobile_intro_bg.png");
   background-position: right;
+  background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 48em) {
-  .landing-section {
-    min-height: 100vh;
+  #landing-section {
     background: url("../img/main/main-background.png");
-    background-position: left -200px top -90px;
+    background-position: center left -50px;
     background-size: cover;
   }
 }
 
-.landing-message {
+#intro {
   max-width: 670px;
+  background-color: $white-200;
+  border: 5px solid white;
 }
 
 address {
@@ -195,7 +243,7 @@ address {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: .25rem;
+  gap: 0.25rem;
 }
 
 @media screen and (min-width: 48em) {
@@ -203,22 +251,41 @@ address {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: .25rem;
+    gap: 0.25rem;
   }
 }
 
 .program-list {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   flex: 1;
-  padding: .8rem;
+  padding: 0.8rem;
   color: $light;
-  text-align: center;
-  background-color: hsla(0deg, 0%, 53%, .3);
+  background-color: hsla(0deg, 0%, 53%, 0.3);
   border: 2px solid transparent;
 }
 
 .program-list:hover {
   cursor: pointer;
   border: 2px solid $light;
+}
+
+.program-title {
+  font-size: .825rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .program-list {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .program-title {
+    font-size: 1.5rem;
+  }
 }
 
 // 3.speaker's section style
