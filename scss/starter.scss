@@ -33,25 +33,11 @@ $container-max-widths: (
 @import "bootstrap/scss/mixins"; // Required
 @import "bootstrap/scss/bootstrap"; // Required
 
-// custom spacers
-$custom-spacers: (
-  6: (
-    $spacer * 3.75,
-  ),
-  7: (
-    $spacer * 5,
-  ),
-  8: (
-    $spacer * 8.68,
-  ),
-  9: (
-    $spacer * 14,
-  ),
-);
-
-$spacers: map-merge($spacers, $custom-spacers);
-
 // utility classes
+html {
+  scroll-behavior: smooth;
+}
+
 .primary-header {
   font-size: 1.9rem;
   font-weight: 900;
