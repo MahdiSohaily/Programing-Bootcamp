@@ -54,7 +54,7 @@ $spacers: map-merge($spacers, $custom-spacers);
 
 // utility classes
 .primary-header {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 900;
   color: $secondary-300;
 }
@@ -62,10 +62,10 @@ $spacers: map-merge($spacers, $custom-spacers);
 #leading-header {
   font-size: 2.2rem;
   font-weight: 900;
-  background: url("../img/sponsers/arcadia.png");
+  background: url("../img/people/speaker_03.png");
   background-clip: text;
   -webkit-background-clip: text;
-  color: rgba(202, 45, 27, 0.8);
+  color: rgba(229, 33, 11, 0.8);
   -webkit-mix-blend-mode: multiply;
   mix-blend-mode: multiply;
 }
@@ -79,13 +79,6 @@ $spacers: map-merge($spacers, $custom-spacers);
 @media screen and (min-width: 48rem) {
   #leading-header {
     font-size: 4rem;
-    font-weight: 900;
-    background: url("../img/sponsers/arcadia.png");
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: rgba(202, 45, 27, 0.8);
-    -webkit-mix-blend-mode: multiply;
-    mix-blend-mode: multiply;
   }
 
   .primary-header {
@@ -224,13 +217,13 @@ header {
 }
 
 #intro {
-  max-width: 670px;
+  max-width: 700px;
   background-color: $white-200;
   border: 5px solid white;
 }
 
 address {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: $secondary-200;
 }
 
