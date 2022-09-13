@@ -3,12 +3,12 @@ $enable-gradients: true;
 $enable-shadows: true;
 
 // Customize some defaults
-$primary: hsl(6, 82%, 59%);
-$secondary: hsl(222, 11%, 17%);
-$secondary-300: hsl(0, 0%, 24%);
-$secondary-200: hsl(0, 0%, 53%);
-$light: hsl(0, 0%, 83%);
-$white-200: hsl(240, 7%, 97%);
+$primary: hsl(6deg, 82%, 59%);
+$secondary: hsl(222deg, 11%, 17%);
+$secondary-300: hsl(0deg, 0%, 24%);
+$secondary-200: hsl(0deg, 0%, 53%);
+$light: hsl(0deg, 0%, 83%);
+$white-200: hsl(240deg, 7%, 97%);
 
 $theme-colors: (
   "primary": $primary,
@@ -18,7 +18,7 @@ $theme-colors: (
   "white-200": $white-200,
 );
 
-$border-radius: 0.4rem;
+$border-radius: .4rem;
 $font-family-base: "Lato", sans-serif;
 
 $container-max-widths: (
@@ -32,7 +32,7 @@ $container-max-widths: (
 @import "bootstrap/scss/variables"; // Required
 @import "bootstrap/scss/mixins"; // Required
 
-@import "bootstrap/scss/bootstrap.scss"; // Required
+@import "bootstrap/scss/bootstrap"; // Required
 
 // custom spacers
 $custom-spacers: (
@@ -55,17 +55,17 @@ $spacers: map-merge($spacers, $custom-spacers);
 // utility classes
 .primary-header {
   font-size: 2rem;
-  color: $secondary-300;
   font-weight: 900;
+  color: $secondary-300;
 }
 
 .secondary-header {
-  font-weight: 700;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .fs-100 {
-  font-size: 0.85rem;
+  font-size: .85rem;
   font-weight: 400;
 }
 
@@ -80,11 +80,11 @@ p {
 }
 
 .border-200 {
-  border-width: 2px !important;
+  border-width: 2px;
 }
 
 .border-400 {
-  border-width: 4px !important;
+  border-width: 4px;
 }
 
 .pt-7 {
@@ -108,9 +108,9 @@ p {
 }
 
 .divider {
-  max-width: 40px !important;
+  max-width: 40px;
   margin-inline: auto;
-  border-width: 2px !important;
+  border-width: 2px;
 }
 
 // header section styles
@@ -125,18 +125,18 @@ header {
 }
 .social-header ul {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
 }
 
 // navbar styles
 .custom-navbar {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 .custom-navbar .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .main-nav {
@@ -150,29 +150,29 @@ header {
 }
 
 .nav-link {
-  color: $secondary-300;
   font-weight: 400;
+  color: $secondary-300;
 }
 
 // main content styles
 // 1. landing-section styles
 .landing-section {
   min-height: 100vh;
-  background: url("../img/main/mobile_intro_bg.png") !important;
-  background-position: right !important;
+  background: url("../img/main/mobile_intro_bg.png");
+  background-position: right;
 }
 
 @media screen and (min-width: 48em) {
   .landing-section {
     min-height: 100vh;
-    background: url("../img/main/main-background.png") !important;
+    background: url("../img/main/main-background.png");
+    background-position: left -200px top -90px;
     background-size: cover;
-    background-position: left -200px top -90px !important;
   }
 }
 
 .landing-message {
-  max-width: 670px !important;
+  max-width: 670px;
 }
 
 address {
@@ -180,7 +180,7 @@ address {
   color: $secondary-200;
 }
 
-img.hero-img {
+.hero-img {
   width: 100%;
   height: auto;
 }
@@ -195,7 +195,7 @@ img.hero-img {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: .25rem;
 }
 
 @media screen and (min-width: 48em) {
@@ -203,17 +203,17 @@ img.hero-img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.25rem;
+    gap: .25rem;
   }
 }
 
 .program-list {
   flex: 1;
-  background-color: hsla(0, 0%, 53%, 0.3);
-  color: $light;
-  border: 2px solid transparent;
   padding: .8rem;
+  color: $light;
   text-align: center;
+  background-color: hsla(0deg, 0%, 53%, .3);
+  border: 2px solid transparent;
 }
 
 .program-list:hover {
