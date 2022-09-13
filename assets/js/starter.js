@@ -16,6 +16,8 @@ window.addEventListener('resize', () => {
   if (window.innerWidth >= 768) {
     mainNav.classList.remove('open');
     mainNav.style.display = 'block';
+  } else {
+    mainNav.style.display = 'none';
   }
 });
 

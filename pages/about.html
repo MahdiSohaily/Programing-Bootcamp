@@ -40,17 +40,17 @@
                 </ul>
             </div>
         </div>
-        <nav class="custom-navbar py-2 ">
+        <nav class="custom-navbar py-2">
             <div class="container">
                 <!-- Brand -->
                 <a class="navbar-brand" href="../index.html">
                     <img src="../assets/img/gs-logo.png" alt="website logo" width="130" height="51">
                 </a>
-
+                <img class="close" src="../assets/img/main/btn-close.png" alt="close button icon" width="15" height="15">
                 <!-- Links -->
                 <ul class="main-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="../pages/about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Program</a>
@@ -74,7 +74,8 @@
     </header>
     <main>
         <section class="about-section pb-7">
-            <div class="container pt-5">
+            <div class="container pt-5 position-relative">
+                <img class="menu" src="../assets/img/main/mobile_menu.png" alt="mobile menu icon" width="25" height="25">
                 <p class="secondary-header text-primary text-center">"Hello! Sharing World"</p>
                 <h1 class="primary-header text-uppercase text-center text-primary">
                     creative commons <br>
@@ -139,27 +140,21 @@
             </div>
         </section>
     </main>
-    <footer class="bg-secondary">
+    <footer class="py-6 bg-secondary">
         <div class="container">
-            <div class="logowrapper">
-                <img class="img-fluid" src="../assets/img/gs-logo.png" alt="website logo">
+          <div class="row footer-wrapper">
+            <div class="logowrapper col-6 col-md-4">
+              <img class="img-fluid" src="../assets/img/main/footer-white.png" alt="website logo">
             </div>
-            <div class="copy-right text-white">
+            <div class="copy-right col-6 col-md-8">
+              <p class="small text-white-200">
                 2015 Creative Commons Korea. Some Rights Reserved.
-
-                All content on the website, unless otherwise specified, is available under a Creative Commons
-                Attribution 2.0
-                Korea License. Please see http://creativecommons.org/licences/by/2.0/kr
-                for detailed usage function details and permission conditions . Creative Commons Global Summit is
-                committed to
-                providing a harassment-free meeting experience for all. See our Code of Conduct and Non-Infringement
-                Policy .
-
+              </p>
             </div>
+          </div>
         </div>
-    </footer>
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script type="module" src="assets/js/starter.js"></script>
+      </footer>
+    <script type="module" src="../assets/js/starter.js"></script>
 </body>
 
 </html>
