@@ -54,7 +54,7 @@ $spacers: map-merge($spacers, $custom-spacers);
 
 // utility classes
 .primary-header {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: $secondary-300;
   font-weight: 900;
 }
@@ -91,6 +91,18 @@ p {
   padding-top: 79px;
 }
 
+.pb-7 {
+  padding-bottom: 79px;
+}
+
+.px-7 {
+  padding-inline: 79px;
+}
+
+.pb-9 {
+  padding-bottom: 90px;
+}
+
 .pb-x {
   padding-bottom: 181px;
 }
@@ -102,6 +114,15 @@ p {
 }
 
 // header section styles
+header {
+  display: none;
+}
+
+@media screen and (min-width: 48em) {
+  header {
+    display: block;
+  }
+}
 .social-header ul {
   display: flex;
   justify-content: flex-end;
@@ -222,10 +243,9 @@ img.hero-img {
 
 // about.html file styles
 .about-section {
-  background: url('../img/main/about_bg_01.png');
+  background: $white-200 url("../img/main/about_bg_01.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
 }
 
 .about-intro {
@@ -235,8 +255,30 @@ img.hero-img {
 
 @media screen and (min-width: 48em) {
   .about-section {
-    background: url('../img/main/about_bg_01.png');
+    background: $white-200 url("../img/main/about_bg_01.png");
     background-position: top 45px center;
     background-repeat: no-repeat;
+  }
+}
+
+// about logo section about.html file
+.logo-desc {
+  max-width: 600px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+// previous cc summits section styles
+.img-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .img-container {
+    flex-direction: row;
   }
 }
