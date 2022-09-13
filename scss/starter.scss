@@ -157,7 +157,8 @@ p {
   }
 }
 // header section styles
-.social-header , .custom-navbar{
+.social-header,
+.custom-navbar {
   display: none;
 }
 
@@ -166,7 +167,8 @@ p {
 // }
 
 @media screen and (min-width: 48em) {
-  .social-header {
+  .social-header,
+  .custom-navbar {
     display: block;
   }
 }
@@ -426,5 +428,4 @@ blockquote {
 .footer-wrapper {
   display: flex;
   align-items: center;
-
 }
