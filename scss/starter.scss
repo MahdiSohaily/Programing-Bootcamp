@@ -171,14 +171,70 @@ p {
   }
 }
 // header section styles
-header {
+.social-header , .custom-navbar{
   display: none;
 }
 
+// .custom-navbar {
+//   display: none;
+// }
+
 @media screen and (min-width: 48em) {
-  header {
+  .social-header {
     display: block;
   }
+}
+
+.open {
+  position: fixed;
+  width: 50%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $secondary !important;
+  z-index: 100;
+  padding: 0;
+}
+
+.close {
+  display: none;
+}
+
+.open .close {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.open .container {
+  padding: 0;
+  margin: 0;
+}
+
+.open ul {
+  display: block;
+  width: 100%;
+}
+
+.open ul li:hover {
+  background-color: hsla(0, 0%, 0%, 0.404);
+}
+
+.open ul li:hover a {
+  color: $primary;
+}
+
+.open ul li:last-child {
+  padding-left: 1rem;
+}
+
+.open ul li a {
+  color: $light;
+}
+
+.open .navbar-brand {
+  display: none;
 }
 
 .social-header ul {
