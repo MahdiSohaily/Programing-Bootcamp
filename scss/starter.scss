@@ -31,7 +31,6 @@ $container-max-widths: (
 @import "bootstrap/scss/functions"; // Required
 @import "bootstrap/scss/variables"; // Required
 @import "bootstrap/scss/mixins"; // Required
-
 @import "bootstrap/scss/bootstrap"; // Required
 
 // custom spacers
@@ -62,11 +61,9 @@ $spacers: map-merge($spacers, $custom-spacers);
 #leading-header {
   font-size: 2.2rem;
   font-weight: 900;
-  background: url("../img/people/speaker_03.png");
-  background-clip: text;
-  -webkit-background-clip: text;
   color: rgba(229, 33, 11, 0.8);
-  -webkit-mix-blend-mode: multiply;
+  background: url("../img/people/speaker_03.png");
+  -webkit-background-clip: text;
   mix-blend-mode: multiply;
 }
 
@@ -82,14 +79,14 @@ $spacers: map-merge($spacers, $custom-spacers);
   }
 
   .primary-header {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
 
   .sub-header {
-  font-size: 2.3rem;
-  font-weight: 400;
-  color: $secondary-300;
-}
+    font-size: 2rem;
+    font-weight: 400;
+    color: $secondary-300;
+  }
 }
 
 .secondary-header {
@@ -109,8 +106,8 @@ ul {
 }
 
 p {
-  color: $secondary-300;
   margin: 0;
+  color: $secondary-300;
 }
 
 .border-200 {
@@ -128,6 +125,7 @@ p {
 .pb-7 {
   padding-bottom: 79px;
 }
+
 .py-9 {
   padding-block: 90px;
 }
@@ -169,6 +167,7 @@ header {
     display: block;
   }
 }
+
 .social-header ul {
   display: flex;
   align-items: center;
@@ -179,6 +178,7 @@ header {
 .custom-navbar {
   background-color: transparent;
 }
+
 .custom-navbar .container {
   display: flex;
   align-items: center;
@@ -189,6 +189,7 @@ header {
   display: none;
   gap: 1.5rem;
 }
+
 @media screen and(min-width: 48em) {
   .main-nav {
     display: flex;
@@ -204,8 +205,8 @@ header {
 // 1. landing-section styles
 #landing-section {
   background: url("../img/main/mobile_intro_bg.png");
-  background-position: right;
   background-repeat: no-repeat;
+  background-position: right;
 }
 
 @media screen and (min-width: 48em) {
@@ -219,7 +220,7 @@ header {
 #intro {
   max-width: 700px;
   background-color: $white-200;
-  border: 5px solid white;
+  border: 5px solid #fff;
 }
 
 address {
@@ -256,11 +257,11 @@ address {
 
 .program-list {
   display: flex;
-  gap: 1rem;
+  flex: 1;
   flex-direction: row;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
-  flex: 1;
   padding: 0.8rem;
   color: $light;
   background-color: hsla(0deg, 0%, 53%, 0.3);
