@@ -6,13 +6,16 @@ $enable-shadows: true;
 $primary: hsl(6, 82%, 59%);
 $secondary: hsl(222, 11%, 17%);
 $secondary-300: hsl(0, 0%, 24%);
+$secondary-200: hsl(0, 0%, 53%);
 $light: hsl(0, 0%, 83%);
+$white-200: hsl(240, 7%, 97%);
 
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
   "secondary-300": $secondary-300,
   "light": $light,
+  "white-200": $white-200,
 );
 
 $border-radius: 0.4rem;
@@ -30,7 +33,6 @@ $container-max-widths: (
 @import "bootstrap/scss/mixins"; // Required
 
 @import "bootstrap/scss/bootstrap.scss"; // Required
-
 
 // custom spacers
 $custom-spacers: (
@@ -51,8 +53,19 @@ $custom-spacers: (
 $spacers: map-merge($spacers, $custom-spacers);
 
 // utility classes
+.primary-header {
+  font-size: 2.5rem;
+  color: $secondary-300;
+  font-weight: 900;
+}
+
+.secondary-header {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 .fs-100 {
-  font-size: 0.8125rem;
+  font-size: 0.85rem;
   font-weight: 400;
 }
 
@@ -62,27 +75,57 @@ ul {
   list-style-type: none;
 }
 
+p {
+  color: $secondary-300;
+}
+
+.border-200 {
+  border-width: 2px !important;
+}
+
 .border-400 {
   border-width: 4px !important;
 }
 
-// header section styles 
-.social-header ul{
+.pt-7 {
+  padding-top: 79px;
+}
+
+.pb-x {
+  padding-bottom: 181px;
+}
+
+.divider {
+  max-width: 40px !important;
+  margin-inline: auto;
+  border-width: 2px !important;
+}
+
+// header section styles
+.social-header ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 // navbar styles
-.custom-navbar .container{
+.custom-navbar {
+  background-color: transparent !important;
+}
+.custom-navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .main-nav {
-  display: flex;
-  gap: 1.5rem
+  display: none;
+  gap: 1.5rem;
+}
+@media screen and(min-width: 48em) {
+  .main-nav {
+    display: flex;
+  }
 }
 
 .nav-link {
@@ -90,10 +133,89 @@ ul {
   font-weight: 400;
 }
 
-
 // main content styles
 // 1. landing-section styles
 .landing-section {
   min-height: 100vh;
-  background: url('../assets/img/main/') !important;
+  background: url("../img/main/mobile_intro_bg.png") !important;
+  background-position: right !important;
+}
+
+@media screen and (min-width: 48em) {
+  .landing-section {
+    min-height: 100vh;
+    background: url("../img/main/main-background.png") !important;
+    background-size: cover;
+    background-position: left -200px top -90px !important;
+  }
+}
+
+.landing-message {
+  max-width: 670px !important;
+}
+
+address {
+  font-size: 1.4rem;
+  color: $secondary-200;
+}
+
+img.hero-img {
+  width: 100%;
+  height: auto;
+}
+
+// 2. main-program styles
+.main-program {
+  background: $secondary url("../img/main/pattern-bg.png");
+  background-position: top;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+@media screen and (min-width: 48em) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+}
+
+.program_list {
+  flex: 1;
+  background-color: hsla(0, 0%, 53%, 0.3);
+  color: $light;
+  border: 2px solid transparent;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+.program_list:hover {
+  border: 2px solid $light;
+  cursor: pointer;
+}
+
+// 3.speaker's section style
+
+.speaker_list {
+  display: grid;
+  gap: 2rem;
+}
+
+.speaker {
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 48em) {
+  .speaker_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
 }
