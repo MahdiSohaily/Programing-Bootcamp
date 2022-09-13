@@ -219,3 +219,24 @@ img.hero-img {
     gap: 1rem;
   }
 }
+
+// about.html file styles
+.about-section {
+  background: url('../img/main/about_bg_01.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.about-intro {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 48em) {
+  .about-section {
+    background: url('../img/main/about_bg_01.png');
+    background-position: top 45px center;
+    background-repeat: no-repeat;
+  }
+}
