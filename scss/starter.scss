@@ -207,23 +207,23 @@ img.hero-img {
   }
 }
 
-.program_list {
+.program-list {
   flex: 1;
   background-color: hsla(0, 0%, 53%, 0.3);
   color: $light;
   border: 2px solid transparent;
+  padding: .8rem;
   text-align: center;
-  padding: 0.8rem;
 }
 
-.program_list:hover {
-  border: 2px solid $light;
+.program-list:hover {
   cursor: pointer;
+  border: 2px solid $light;
 }
 
 // 3.speaker's section style
 
-.speaker_list {
+.speaker-list {
   display: grid;
   gap: 2rem;
 }
@@ -234,7 +234,7 @@ img.hero-img {
 }
 
 @media screen and (min-width: 48em) {
-  .speaker_list {
+  .speaker-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -256,8 +256,8 @@ img.hero-img {
 @media screen and (min-width: 48em) {
   .about-section {
     background: $white-200 url("../img/main/about_bg_01.png");
-    background-position: top 45px center;
     background-repeat: no-repeat;
+    background-position: top 45px center;
   }
 }
 
@@ -270,11 +270,11 @@ img.hero-img {
 
 // previous cc summits section styles
 .img-container {
-  padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   gap: 1.5rem;
+  justify-content: space-around;
+  padding: 30px;
 }
 
 @media screen and (min-width: 48em) {
