@@ -117,6 +117,7 @@ ul {
 
 p {
   color: $secondary-300;
+  margin: 0;
 }
 
 .border-200 {
@@ -158,6 +159,11 @@ p {
 
 .text-xl {
   font-size: 3rem;
+}
+
+.w-10 {
+  width: 20px;
+  margin-block: 5px;
 }
 
 // header section styles
@@ -274,7 +280,7 @@ address {
 }
 
 .program-title {
-  font-size: .825rem;
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 48rem) {
@@ -298,6 +304,11 @@ address {
 .speaker {
   display: flex;
   gap: 1rem;
+}
+
+blockquote {
+  font-size: 14px;
+  font-style: italic;
 }
 
 @media screen and (min-width: 48em) {
