@@ -209,16 +209,16 @@ p {
   background-color: hsla(0, 0%, 0%, 0.404);
 }
 
-.open ul li:hover a {
-  color: $primary;
-}
-
 .open ul li:last-child {
   padding-left: 1rem;
 }
 
 .open ul li a {
   color: $light;
+}
+
+.open ul li:hover a {
+  color: $primary;
 }
 
 .open .navbar-brand {
