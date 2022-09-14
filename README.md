@@ -11,6 +11,7 @@ Also the content of this challenge is customized based on [Laracasts](https://la
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
+  - [Setup](#setup)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
@@ -42,6 +43,17 @@ Users should be able to:
 
 - Challenge URL: [https://www.behance.net/gallery/29845175/CC-Global-Summit-2015/](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015/)
 - Live Site URL: [https://mahdisohaily.github.io/Programing-Bootcamp/](https://mahdisohaily.github.io/Programing-Bootcamp/)
+
+### Setup
+To run this project you have to follow the following steps.
+- `git clone https://github.com/MahdiSohaily/Programing-Bootcamp.git`
+- `cd Programing-Bootcamp`
+- `npm run install`
+- `npm run css-compile`
+- `npm run server`
+
+Also take a look to the `package,json` file for other available options.
+
 
 ## My process
 
