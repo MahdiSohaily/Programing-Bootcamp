@@ -15,6 +15,9 @@ Also the content of this challenge is customized based on [Laracasts](https://la
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
+- [Contributing](#Contributing)
+- [Acknowledgments](#Acknowledgments)
+
 
 ## Overview
 
