@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Challenge URL: [Challenge URL](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015/)
-- Live Site URL: [Live site URL](https://mahdisohaily.github.io/Programing-Bootcamp/)
+- Challenge URL: [https://www.behance.net/gallery/29845175/CC-Global-Summit-2015/](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015/)
+- Live Site URL: [https://mahdisohaily.github.io/Programing-Bootcamp/](https://mahdisohaily.github.io/Programing-Bootcamp/)
 
 ## My process
 
