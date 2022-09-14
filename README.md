@@ -75,6 +75,7 @@ Also take a look to the `package,json` file for other available options.
  👤 **Mahdi Rezaei**
 - LinkedIn - [@MahdiSohaily](https://www.linkedin.com/in/mahdi-rezaei-74705713b/)
 - Twitter - [@Mahdi_Rezaei_AF](https://twitter.com/Mahdi_Rezaei_AF)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
