@@ -11,15 +11,15 @@ $light: hsl(0deg, 0%, 83%);
 $white-200: hsl(240deg, 7%, 97%);
 
 $theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "secondary-300": $secondary-300,
-  "light": $light,
-  "white-200": $white-200,
+  'primary': $primary,
+  'secondary': $secondary,
+  'secondary-300': $secondary-300,
+  'light': $light,
+  'white-200': $white-200,
 );
 
 $border-radius: 0.4rem;
-$font-family-base: "Lato", sans-serif;
+$font-family-base: 'Lato', sans-serif;
 
 $container-max-widths: (
   sm: 540px,
@@ -28,14 +28,29 @@ $container-max-widths: (
   xl: 1100px,
 );
 
-@import "bootstrap/scss/functions"; // Required
-@import "bootstrap/scss/variables"; // Required
-@import "bootstrap/scss/mixins"; // Required
-@import "bootstrap/scss/bootstrap"; // Required
+@import 'bootstrap/scss/functions'; // Required
+@import 'bootstrap/scss/variables'; // Required
+@import 'bootstrap/scss/mixins'; // Required
+@import 'bootstrap/scss/bootstrap'; // Required
 
 // utility classes
 html {
   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.544);
+  margin-block: -5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.612);
+  border-radius: 5px;
 }
 
 .primary-header {
@@ -49,7 +64,7 @@ html {
   font-weight: 900;
   height: 100px;
   color: rgba(229, 33, 11, 0.8);
-  background: url("../img/main/past-2.svg");
+  background: url('../img/main/past-2.svg');
   -webkit-background-clip: text;
   mix-blend-mode: multiply;
 }
@@ -95,6 +110,9 @@ ul {
 p {
   margin: 0;
   color: $secondary-300;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: left;
 }
 
 .border-200 {
@@ -175,11 +193,6 @@ header {
   .custom-navbar {
     display: block;
   }
-}
-
-.nav-link {
-  font-weight: bold !important;
-  font-size: 14px;
 }
 
 .open {
@@ -263,7 +276,8 @@ header {
 }
 
 .nav-link {
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 700;
   color: $secondary-300;
 }
 
@@ -282,7 +296,7 @@ header {
 // main content styles
 // 1. landing-section styles
 #landing-section {
-  background: url("../img/main/mobile_intro_bg.png");
+  background: url('../img/main/mobile_intro_bg.png');
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -290,7 +304,7 @@ header {
 
 @media screen and (min-width: 48em) {
   #landing-section {
-    background: url("../img/main/main-background.png");
+    background: url('../img/main/main-background.png');
     background-position: center left -50px;
   }
 }
@@ -313,7 +327,7 @@ address {
 
 // 2. main-program styles
 .main-program {
-  background: $secondary url("../img/main/pattern-bg.png");
+  background: $secondary url('../img/main/pattern-bg.png');
   background-position: top;
 }
 
@@ -356,6 +370,11 @@ address {
   font-size: 1rem;
 }
 
+.course {
+  background-color: $primary;
+  padding: 1.5rem 3rem;
+}
+
 @media screen and (min-width: 48rem) {
   .program-list {
     flex-direction: column;
@@ -364,6 +383,11 @@ address {
 
   .program-title {
     font-size: 1.5rem;
+  }
+
+  .course {
+    text-decoration: underline;
+    background-color: transparent;
   }
 }
 
@@ -394,7 +418,7 @@ blockquote {
 
 // about.html file styles
 .about-section {
-  background: $white-200 url("../img/main/about_bg_01.png");
+  background: $white-200 url('../img/main/about_bg_01.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -406,7 +430,7 @@ blockquote {
 
 @media screen and (min-width: 48em) {
   .about-section {
-    background: $white-200 url("../img/main/about_bg_01.png");
+    background: $white-200 url('../img/main/about_bg_01.png');
     background-repeat: no-repeat;
     background-position: top 45px center;
   }
@@ -419,11 +443,6 @@ blockquote {
   text-align: center;
 }
 
-p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  text-align: left;
-}
 // previous cc summits section styles
 .img-container {
   display: flex;
@@ -463,5 +482,5 @@ p {
   height: 100vh;
   width: 100%;
   position: fixed;
-  z-index: 1000;
+  z-index: 10000;
 }

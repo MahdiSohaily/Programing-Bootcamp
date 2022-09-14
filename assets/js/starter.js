@@ -25,3 +25,10 @@ mainNav.addEventListener('click', () => {
   mainNav.style.display = 'none';
   mainNav.classList.remove('open');
 });
+
+window.addEventListener('load', typeWriter);
+
+function typeWriter() {
+  const preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+}
