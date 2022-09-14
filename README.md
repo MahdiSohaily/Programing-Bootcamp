@@ -1,7 +1,8 @@
 # CC Global Summit 2015 - Cindy Shin
 
 This is a solution to the [CC Global Summit 2015](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)
-by Cindy Shin
+by Cindy Shin.
+Also the content of this challenge is customized based on [Laracasts](https://laracasts.com/) website.
 
 
 ## Table of contents
