@@ -3,7 +3,6 @@ const header = document.getElementById('leading-header');
 const title = 'A stream of endless knowledge.';
 const speed = 50;
 let i = 0;
-window.addEventListener('load', typeWriter);
 
 function typeWriter() {
   const preloader = document.getElementById('preloader');
@@ -15,18 +14,9 @@ function typeWriter() {
   }
 }
 
-// generating dynamic content for speakers section
-const container = document.querySelector('.speaker-list');
-fetch('./data.json')
-  .then((response) => response.json())
-  .then((json) => createElem(json));
-function createElem(json) {
-  const obj = json['speakers'];
-  for (let counter = 0; counter < obj.length; counter++) {
-    container.innerHTML += appendElem(obj[counter]);
-  }
-}
+window.addEventListener('load', typeWriter);
 
+// generating dynamic content for speakers section
 function appendElem(elem) {
   const template = `<article class="speaker">
       <div class="speaker-image">
@@ -45,3 +35,16 @@ function appendElem(elem) {
   </article>`;
   return template;
 }
+
+function createElem(json) {
+  const obj = json.speakers;
+  for (let counter = 0; counter < obj.length; counter+=1) {
+    container.innerHTML += appendElem(obj[counter]);
+  }
+}
+
+const container = document.querySelector('.speaker-list');
+
+fetch('./data.json')
+  .then((response) => response.json())
+  .then((json) => createElem(json));
