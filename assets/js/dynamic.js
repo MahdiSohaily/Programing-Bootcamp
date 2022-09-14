@@ -9,7 +9,7 @@ function typeWriter() {
   preloader.style.display = 'none';
   if (i < title.length) {
     header.innerHTML += title.charAt(i);
-    i++;
+    i += 1;
     setTimeout(typeWriter, speed);
   }
 }
@@ -35,15 +35,14 @@ function appendElem(elem) {
   </article>`;
   return template;
 }
+const container = document.querySelector('.speaker-list');
 
 function createElem(json) {
   const obj = json.speakers;
-  for (let counter = 0; counter < obj.length; counter+=1) {
+  for (let counter = 0; counter < obj.length; counter += 1) {
     container.innerHTML += appendElem(obj[counter]);
   }
 }
-
-const container = document.querySelector('.speaker-list');
 
 fetch('./data.json')
   .then((response) => response.json())
