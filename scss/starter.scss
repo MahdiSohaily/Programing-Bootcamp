@@ -437,10 +437,22 @@ blockquote {
 }
 
 // about logo section about.html file
+@media screen and (mon-width: 48em) {
+  .about-logo {
+    background: url('../img/main/introduction.svg'), url('../img/main/larylab.svg');
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: top 100px right -100px, bottom left 20px;
+  }
+}
+
 .logo-desc {
   max-width: 800px;
   margin-inline: auto;
-  text-align: center;
+}
+
+.logo-desc p {
+  color: $secondary-300;
 }
 
 // previous cc summits section styles
