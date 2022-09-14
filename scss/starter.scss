@@ -475,7 +475,7 @@ blockquote {
 }
 
 #preloader {
-  background: #000 url('../img/preloader.gif');
+  background: $secondary url('../img/preloader.gif');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 15%;
