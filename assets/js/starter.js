@@ -32,3 +32,5 @@ function typeWriter() {
 }
 
 window.addEventListener('load', typeWriter);
+
+
