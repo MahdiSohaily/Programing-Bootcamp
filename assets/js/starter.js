@@ -25,3 +25,19 @@ mainNav.addEventListener('click', () => {
   mainNav.style.display = 'none';
   mainNav.classList.remove('open');
 });
+
+
+// leading-header animation;
+const header = document.getElementById('leading-header');
+const title = 'A stream of endless knowledge.';
+const speed = 50;
+let i = 0;
+window.addEventListener('load', typeWriter)
+
+function typeWriter() {
+  if (i < title.length) {
+    header.innerHTML += title.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
