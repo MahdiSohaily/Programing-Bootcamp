@@ -437,7 +437,7 @@ blockquote {
 }
 
 // about logo section about.html file
-@media screen and (mon-width: 48em) {
+@media screen and (min-width: 48em) {
   .about-logo {
     background: url('../img/main/introduction.svg'), url('../img/main/larylab.svg');
     background-repeat: no-repeat;
