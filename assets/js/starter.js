@@ -33,4 +33,11 @@ function typeWriter() {
 
 window.addEventListener('load', typeWriter);
 
-
+const totop = document.querySelector('.totop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 120) {
+    totop.style.display = 'block';
+  } else {
+    totop.style.display = 'none';
+  }
+});
