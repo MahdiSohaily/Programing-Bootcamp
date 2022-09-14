@@ -25,5 +25,3 @@ mainNav.addEventListener('click', () => {
   mainNav.style.display = 'none';
   mainNav.classList.remove('open');
 });
-
-

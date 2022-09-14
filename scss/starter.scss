@@ -158,20 +158,28 @@ p {
   }
 }
 // header section styles
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
 .social-header,
 .custom-navbar {
   display: none;
 }
-
-// .custom-navbar {
-//   display: none;
-// }
 
 @media screen and (min-width: 48em) {
   .social-header,
   .custom-navbar {
     display: block;
   }
+}
+
+.nav-link {
+  font-weight: bold !important;
+  font-size: 14px;
 }
 
 .open {
