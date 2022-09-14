@@ -72,6 +72,25 @@ Also take a look to the `package,json` file for other available options.
 - [sass](https://sass-lang.com/) - CSS preprocessor
 - [vite.js](https://vitejs.dev/) - Vite is a build tool
 ## Author
- **Mahdi Rezaei**
+ 👤 **Mahdi Rezaei**
 - LinkedIn - [@MahdiSohaily](https://www.linkedin.com/in/mahdi-rezaei-74705713b/)
 - Twitter - [@Mahdi_Rezaei_AF](https://twitter.com/Mahdi_Rezaei_AF)
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- This is a solution to the [CC Global Summit 2015](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)
+by Cindy Shin.
+- Also the content of this challenge is customized based on [Laracasts](https://laracasts.com/) website.
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
