@@ -1,22 +1,43 @@
-// Importing JavaScript
-//
-// You have two choices for including Bootstrap's JS files—the whole thing,
-// or just the bits that you need.
+const openMenu = document.querySelector('.menu');
+const closeMenu = document.querySelector('.close');
+const mainNav = document.querySelector('.custom-navbar');
 
+openMenu.addEventListener('click', () => {
+  mainNav.style.display = 'block';
+  mainNav.classList.toggle('open');
+});
 
-// Option 1
-//
-// Import Bootstrap's bundle (all of Bootstrap's JS + Popper.js dependency)
+closeMenu.addEventListener('click', () => {
+  mainNav.style.display = 'none';
+  mainNav.classList.remove('open');
+});
 
-// import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768) {
+    mainNav.classList.remove('open');
+    mainNav.style.display = 'block';
+  } else {
+    mainNav.style.display = 'none';
+  }
+});
 
+mainNav.addEventListener('click', () => {
+  mainNav.style.display = 'none';
+  mainNav.classList.remove('open');
+});
 
-// Option 2
-//
-// Import just what we need
+function typeWriter() {
+  const preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+}
 
-// If you're importing tooltips or popovers, be sure to include our Popper.js dependency
-// import "../../node_modules/popper.js/dist/popper.min.js";
+window.addEventListener('load', typeWriter);
 
-import "../../node_modules/bootstrap/js/dist/util.js";
-import "../../node_modules/bootstrap/js/dist/modal.js";
+const totop = document.querySelector('.totop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 120) {
+    totop.style.display = 'block';
+  } else {
+    totop.style.display = 'none';
+  }
+});

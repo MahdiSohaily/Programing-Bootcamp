@@ -1,91 +1,519 @@
-// Override Bootstrap's Sass default variables
-//
-// Nearly all variables in Bootstrap are written with the `!default` flag.
-// This allows you to override the default values of those variables before
-// you import Bootstrap's source Sass files.
-//
-// Overriding the default variable values is the best way to customize your
-// CSS without writing _new_ styles. For example, change you can either change
-// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
-// `body { color: red; }`.
-
-
-//
-//
-// Bring in Bootstrap
-//
-
-// Option 1
-//
-// Import all of Bootstrap's CSS
-
-// @import "bootstrap/scss/bootstrap";
-
-// Option 2
-//
-// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
-
 // Toggle global options
 $enable-gradients: true;
 $enable-shadows: true;
 
 // Customize some defaults
-$body-color: #333;
-$body-bg: #fff;
-$border-radius: .4rem;
-$success: #7952b3;
+$primary: hsl(6deg, 82%, 59%);
+$secondary: hsl(222deg, 11%, 17%);
+$secondary-300: hsl(0deg, 0%, 24%);
+$secondary-200: hsl(0deg, 0%, 53%);
+$light: hsl(0deg, 0%, 83%);
+$white-200: hsl(240deg, 7%, 97%);
 
-@import "bootstrap/scss/functions"; // Required
-@import "bootstrap/scss/variables"; // Required
-@import "bootstrap/scss/mixins"; // Required
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'secondary-300': $secondary-300,
+  'light': $light,
+  'white-200': $white-200,
+);
 
-@import "bootstrap/scss/root"; // Required
-@import "bootstrap/scss/reboot"; // Required
-@import "bootstrap/scss/type";
-// @import "bootstrap/scss/images";
-// @import "bootstrap/scss/code";
-@import "bootstrap/scss/grid";
-// @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/transitions";
-// @import "bootstrap/scss/dropdown";
-// @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/input-group"; // Requires forms
-// @import "bootstrap/scss/custom-forms";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
-// @import "bootstrap/scss/card";
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/jumbotron";
-// @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/media";
-// @import "bootstrap/scss/list-group";
-@import "bootstrap/scss/close";
-// @import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal"; // Requires transitions
-// @import "bootstrap/scss/tooltip";
-// @import "bootstrap/scss/popover";
-// @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
-@import "bootstrap/scss/utilities";
-// @import "bootstrap/scss/print";
+$border-radius: 0.4rem;
+$font-family-base: 'Lato', sans-serif;
 
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1100px,
+);
 
-//
-// Custom styles
-//
+@import 'bootstrap/scss/functions'; // Required
+@import 'bootstrap/scss/variables'; // Required
+@import 'bootstrap/scss/mixins'; // Required
+@import 'bootstrap/scss/bootstrap'; // Required
 
-@import "icon-list";
-
-body {
-  padding: 3rem 1.5rem;
+// utility classes
+html {
+  scroll-behavior: smooth;
 }
 
-// Style Bootstrap icons
-.bi {
-  fill: currentcolor;
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.544);
+  margin-block: -5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.612);
+  border-radius: 5px;
+}
+
+.primary-header {
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: $secondary-300;
+}
+
+#leading-header {
+  font-size: 2.2rem;
+  font-weight: 900;
+  height: 100px;
+  color: rgba(229, 33, 11, 0.8);
+  background: url('../img/main/past-2.svg');
+  -webkit-background-clip: text;
+  mix-blend-mode: multiply;
+}
+
+.sub-header {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $secondary-300;
+}
+
+@media screen and (min-width: 48rem) {
+  #leading-header {
+    font-size: 4rem;
+  }
+
+  .primary-header {
+    font-size: 2.5rem;
+  }
+
+  .sub-header {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $secondary-300;
+  }
+}
+
+.secondary-header {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.fs-100 {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+  color: $secondary-300;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.border-200 {
+  border-width: 2px;
+}
+
+.border-400 {
+  border-width: 4px;
+}
+
+.pt-7 {
+  padding-top: 79px;
+}
+
+.pb-7 {
+  padding-bottom: 79px;
+}
+
+.py-6 {
+  padding-block: 20px;
+}
+
+.py-9 {
+  padding-block: 90px;
+}
+
+.px-7 {
+  padding-inline: 79px;
+}
+
+.pt-9 {
+  padding-top: 90px;
+}
+
+.pb-9 {
+  padding-bottom: 90px;
+}
+
+.pb-x {
+  padding-bottom: 181px;
+}
+
+.divider {
+  max-width: 40px;
+  margin-inline: auto;
+  border-width: 2px;
+}
+
+.text-xl {
+  font-size: 3rem;
+}
+
+.w-10 {
+  width: 20px;
+  margin-block: 5px;
+}
+
+@media screen and (min-width: 48em) {
+  .py-6 {
+    padding-block: 50px;
+  }
+}
+// header section styles
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.social-header,
+.custom-navbar {
+  display: none;
+}
+
+@media screen and (min-width: 48em) {
+  .social-header,
+  .custom-navbar {
+    display: block;
+  }
+}
+
+.open {
+  position: fixed;
+  width: 70%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $secondary !important;
+  z-index: 100;
+  padding: 0;
+}
+
+.close {
+  display: none;
+}
+
+.open .close {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.open .container {
+  padding: 0;
+  margin: 0;
+}
+
+.open ul {
+  display: block;
+  width: 100%;
+}
+
+.open ul li:hover {
+  background-color: hsla(0, 0%, 0%, 0.404);
+}
+
+.open ul li:last-child {
+  padding-left: 1rem;
+}
+
+.open ul li a {
+  color: $light;
+}
+
+.open ul li:hover a {
+  color: $primary;
+}
+
+.open .navbar-brand {
+  display: none;
+}
+
+.social-header ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+// navbar styles
+.custom-navbar {
+  background-color: transparent;
+}
+
+.custom-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav {
+  display: none;
+  gap: 1.5rem;
+}
+
+@media screen and(min-width: 48em) {
+  .main-nav {
+    display: flex;
+  }
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: $secondary-300;
+}
+
+.menu {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+}
+
+@media screen and (min-width: 48em) {
+  .menu {
+    display: none;
+  }
+}
+
+// main content styles
+// 1. landing-section styles
+#landing-section {
+  background: url('../img/main/mobile_intro_bg.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+@media screen and (min-width: 48em) {
+  #landing-section {
+    background: url('../img/main/main-background.png');
+    background-position: center left -50px;
+  }
+}
+
+#intro {
+  max-width: 700px;
+  background-color: $white-200;
+  border: 5px solid #fff;
+}
+
+address {
+  font-size: 1.1rem;
+  color: $secondary-200;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+}
+
+// 2. main-program styles
+.main-program {
+  background: $secondary url('../img/main/pattern-bg.png');
+  background-position: top;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+@media screen and (min-width: 48em) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+}
+
+.program-list {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  color: $light;
+  background-color: hsla(0deg, 0%, 53%, 0.3);
+  border: 2px solid transparent;
+}
+
+.program-list:hover {
+  cursor: pointer;
+  border: 2px solid $light;
+}
+
+.program-title {
+  font-size: 1rem;
+}
+
+.course {
+  background-color: $primary;
+  padding: 1.5rem 3rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .program-list {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .program-title {
+    font-size: 1.5rem;
+  }
+
+  .course {
+    text-decoration: underline;
+    background-color: transparent;
+  }
+}
+
+// 3.speaker's section style
+
+.speaker-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.speaker {
+  display: flex;
+  gap: 1rem;
+}
+
+blockquote {
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media screen and (min-width: 48em) {
+  .speaker-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+// about.html file styles
+.about-section {
+  background: $white-200 url('../img/main/about_bg_01.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.about-intro {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 48em) {
+  .about-section {
+    background: $white-200 url('../img/main/about_bg_01.png');
+    background-repeat: no-repeat;
+    background-position: top 45px center;
+  }
+}
+
+// about logo section about.html file
+@media screen and (min-width: 48em) {
+  .about-logo {
+    background: url('../img/main/introduction.svg'), url('../img/main/larylab.svg');
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: top 100px right -100px, bottom left 20px;
+  }
+
+  .speakers {
+    background: url('../img/main/larysmart.svg');
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: top 50px right -50px;
+  }
+}
+
+.logo-desc {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.logo-desc p {
+  color: $secondary-300;
+}
+
+// previous cc summits section styles
+.img-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+@media screen and (min-width: 48em) {
+  .img-container {
+    flex-direction: row;
+  }
+}
+
+// footer section styles
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 48em) {
+  .footer-wrapper {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+#preloader {
+  background: #000 url('../img/preloader.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+}
+
+.totop {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.totop:hover {
+  width: 60px;
+  height: 60px;
 }

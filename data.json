@@ -1,0 +1,40 @@
+{
+  "speakers": [
+    {
+      "fullName": "Taylor Otwell",
+      "position": "Owner at Laravel",
+      "picture": "./assets/img/people/taylor.jpeg",
+      "quote": "I founded and created Laravel for the happiness of all sentient beings, especially developers."
+    },
+    {
+      "fullName": "Jonathan Reinink",
+      "position": "Developer at Tailwind",
+      "picture": "./assets/img/people/jonathan.jpeg",
+      "quote": "Hello! My name is Jonathan Reinink. I work at Tailwind Labs where we build Tailwind CSS and Tailwind UI, among other things. I am also active in the open source community."
+    },
+    {
+      "fullName": "Andre Madarang",
+      "position": "Instructor at Laracasts",
+      "picture": "./assets/img/people/ander.jpeg",
+      "quote": "Greetings! I'm Andre, a full-stack web developer and Laracasts instructor. My other hobbies include playing guitar, video graphs and gaming."
+    },
+    {
+      "fullName": "Mohamed Said",
+      "position": "Web Developer at Laravel",
+      "picture": "./assets/img/people/mohammad.jpeg",
+      "quote": "I help build Laravel with Taylor Otwell, and am currently working on Forge, Envoyer, Spark, Vapor, Telescope, and Horizon."
+    },
+    {
+      "fullName": "Michael Timbs",
+      "position": "Software Developer at GorillaStack",
+      "picture": "./assets/img/people/michael.jpeg",
+      "quote": "Proud Dad, Software Developer, Hobby Data Scientist, Degenerate Gambler. Follow me on Medium or connect on LinkedIn."
+    },
+    {
+      "fullName": "Marcel Pociot",
+      "position": "Software Engineer at Beyond Code",
+      "picture": "./assets/img/people/marcel.jpeg",
+      "quote": "I'm a developer and managing partner at my company Beyond Code, living near Mönchengladbach in Germany. You can follow me on Twitter to stay connected."
+    }
+  ]
+}

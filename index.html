@@ -8,18 +8,234 @@
   <meta name="keyword" content="HTML5, CSS3, Vanilla JS, Vite.js, Bootcamp, Programming">
   <meta name="description"
     content="The purpose of this repository is to measure my understanding of HTML5, CSS3, Vanilla JS, and GitHub workflow.">
-  <link rel="stylesheet" href="assets/css/starter.css">
+    <title>Programming Bootcamp</title>
+  <!-- font family -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap"
     rel="stylesheet">
-  <title>Programming Bootcamp</title>
+  <!-- project styles -->
+  <link rel="stylesheet" href="assets/css/starter.css">
 </head>
+
 <body>
-
-
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-  <script type="module" src="assets/js/starter.js"></script>
+  <div id="preloader"></div>
+  <header class="shadow">
+    <div class="social-header bg-secondary-300">
+      <div class="container">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link text-light">
+              <img loading="lazy" src="./assets/img/main/facebook.png" alt="facebook icon" width="9" height="18">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link text-light">
+              <img loading="lazy" src="./assets/img/main/twitter.png" alt="twitter icon" width="18" height="18">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link text-light fs-100">Persian</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav class="custom-navbar py-2">
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <img loading="lazy" src="./assets/img/logo.svg" alt="website logo" width="130" height="51">
+        </a>
+        <img loading="lazy" class="close" src="./assets/img/main/btn-close.png" alt="close button icon" width="15" height="15">
+        <!-- Links -->
+        <ul class="main-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pages/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Program</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Join</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sponsor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-primary border border-primary border-400 rounded-0">Join us</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="landing-section">
+      <div class="container py-9 position-relative">
+        <img loading="lazy" class="menu" src="./assets/img/main/mobile_menu.png" alt="mobile menu icon" width="25" height="25">
+        <p class="sub-header text-primary">"Hello! Sharing World"</p>
+        <h1 id="leading-header" class="text-xl">
+        </h1>
+        <div id="intro" class="p-4 mt-4">
+          There's no shortage of content at Laracasts. Push your web development skills to the next level, through
+          expert screencasts on Laravel, Vue, and so much more.
+          Joining takes less than a minute, and, if your peers are correct, is the best decision you'll make all day. If
+          you're still on the fence, we have a plan called “monthly” - and it’s not like the gym. Seriously, you can
+          cancel it in five seconds if this isn't for you.
+        </div>
+        <div class="location">
+          <div class="dateinfo">
+            <p class="primary-header mt-5">Laracast provide you the best quality materials</p>
+          </div>
+          <div class="locate">
+            <address>@ National Museum of Korea, Art Center Nabi.</address>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main-program pb-7">
+      <div class="container">
+        <h2 class="secondary-header text-light text-center pt-7 ">Pick a topic. Any topic.</h2>
+        <div class=" divider border-bottom border-primary my-3"></div>
+        <p class="w-75 mx-auto text-center text-white-200 lead">Why learn a tool second-hand, when you can instead be
+          taught
+          by the very person who created it? CreatorSeries
+          provide deep-dives into technologies, as presented by their original creators.</p>
+        <div class="wrapper my-5">
+          <div class="program-list">
+            <div class="program_icon">
+              <img loading="lazy" src="./assets/img/main/icon-1.png" alt="php" width="70" height="70">
+            </div>
+            <h2 class="program-title text-primary ">
+              PHP
+            </h2>
+            <div class="program_sub_description fs-100">
+              We all start somewhere. For programming, this series is that first step. I've designed it specifically for
+              newcomers to, not just PHP, but programming in general.
+            </div>
+          </div>
+          <div class="program-list">
+            <div class="program_icon">
+              <img loading="lazy" src="./assets/img/main/icon-2.png" alt="conference" width="70" height="70">
+            </div>
+            <h2 class="program-title text-primary ">
+              Laravel 8 From Scratch
+            </h2>
+            <div class="program_sub_description fs-100">
+              We don't learn tools for the sake of learning tools. Instead, we learn them because they help us
+              accomplish a particular goal.
+            </div>
+          </div>
+          <div class="program-list">
+            <div class="program_icon">
+              <img loading="lazy" src="./assets/img/main/icon-4.png" alt="conference" width="70" height="70">
+            </div>
+            <h2 class="program-title text-primary ">
+              Vim Mastery
+            </h2>
+            <div class="program_sub_description fs-100">
+              There's a reason why, after decades, countless developers still prefer Vim as their code editor of choice.
+              That many people can't be wrong, right? Let's learn this topic.
+            </div>
+          </div>
+          <div class="program-list">
+            <div class="program_icon">
+              <img loading="lazy" src="./assets/img/main/icon-3.png" alt="conference" width="70" height="70">
+            </div>
+            <h2 class="program-title text-primary ">
+              CSS Grids
+            </h2>
+            <div class="program_sub_description fs-100">
+              Grid is one of the most powerful tools in CSS, but also the most confusing one. Once you master creating
+              layouts with CSS grids, you’ll wonder how you lived without it.
+            </div>
+          </div>
+          <div class="program-list">
+            <div class="program_icon">
+              <img loading="lazy" src="./assets/img/main/icon-5.png" alt="conference" width="70" height="70">
+            </div>
+            <h2 class="program-title text-primary ">
+              Regular Expressions
+            </h2>
+            <div class="program_sub_description fs-100">
+              Does the thought of a confusing regular expression send chills down your back? Don't worry; you're in the
+              majority.
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <a class="text-white course" href="javascript:void(0)">See the hole courses</a>
+        </div>
+      </div>
+    </section>
+    <section class="speakers">
+      <div class="container">
+        <h2 class="secondary-header text-secondary text-center pt-7 ">Modern. Current. Expert Teachers.</h2>
+        <div class=" divider border-bottom border-primary my-3"></div>
+        <p class="w-75 mx-auto text-center text-secondary lead">
+          In addition to our full-time instructors, we often reach out to top developers in the programming space for
+          their expertise.</p>
+        <div class="speaker-list mt-5 pb-7">
+        </div>
+      </div>
+    </section>
+    <section class="partner bg-secondary-300 py-5">
+      <div class="container">
+        <h2 class="secondary-header text-light text-center">Our Partners</h2>
+        <div class=" divider border-bottom border-primary my-3"></div>
+        <p class="w-75 mx-auto text-center text-white-200 lead">
+          Support us and become our partner today.
+        </p>
+        <div class="my-5">
+          <ul class="wrapper">
+            <li>
+              <img loading="lazy" class="img-fluid m-2" width="170" height="40" src="./assets/img/partner/storyblok.avif" alt="">
+            </li>
+            <li>
+              <img loading="lazy" class="img-fluid m-2" width="170" height="40" src="./assets/img/partner/nuxt.avif" alt="">
+            </li>
+            <li>
+              <img loading="lazy" class="img-fluid m-2" width="170" height="40" src="./assets/img/partner/vehikl.avif" alt="">
+            </li>
+            <li>
+              <img loading="lazy" class="img-fluid m-2" width="170" height="40" src="./assets/img/partner/vuemastery.avif" alt="">
+            </li>
+            <li>
+              <img loading="lazy" class="img-fluid m-2" width="170" height="40" src="./assets/img/partner/vueschool.avif" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="py-6">
+    <div class="container">
+      <div class="row footer-wrapper">
+        <div class="logowrapper  col-md-4">
+          <img loading="lazy" class="img-fluid" src="./assets/img/main/logo.svg" alt="website logo" width="300px" height="50px">
+        </div>
+        <div class="copy-right  col-md-8">
+          <p class="small">
+            Nine out of ten doctors recommend Laracasts over competing brands. Come inside, see for
+            yourself, and massively level up your development skills in the process.
+          </p>
+          <p class="small mt-4">
+            2015 Creative Commons Korea. Some Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#">
+    <img class="totop" src="./assets/img/main/totopbtn.png" alt="to top button icon" width="50" height="50">
+  </a>
+  <script type="module" src="./assets/js/starter.js"></script>
+  <script type="module" src="./assets/js/dynamic.js"></script>
 </body>
 
 </html>
