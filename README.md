@@ -55,7 +55,7 @@ To run this project you have to follow the following steps.
 - `npm run css-compile`
 - `npm run server`
 
-Also take a look to the `package,json` file for other available options.
+Also take a look to the `package.json` file for other available options.
 
 
 ## My process
